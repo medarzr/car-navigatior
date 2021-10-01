@@ -120,6 +120,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				E7A8B46B2707054000424D0D /* Resources */,
 				13B07FAE1A68108700A75B9A /* navigatorPrj */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* navigatorPrjTests */,
@@ -150,6 +151,13 @@
 				1D0AE47A65C8663E3B452821 /* Pods-navigatorPrj-navigatorPrjTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E7A8B46B2707054000424D0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

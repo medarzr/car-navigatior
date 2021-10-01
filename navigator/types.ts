@@ -1,6 +1,6 @@
 export type StackParamList = {
   SettingsScreen: undefined;
-  AddInformation: undefined;
+  AddInformation: { item: Object  } | undefined;
 
 };
 export type TabParamList = {

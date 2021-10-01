@@ -45,5 +45,6 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['warn', { variables: false }],
     'react-native/no-inline-styles': 'off',
     'prettier/prettier': 0,
+    "react-hooks/exhaustive-deps": 'off'
   },
 };
