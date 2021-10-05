@@ -1,6 +1,7 @@
 export type StackParamList = {
-  SettingsScreen: undefined;
+  Settings: undefined;
   AddInformation: { item: Object  } | undefined;
+  DriverInformation: { item: Object  } | undefined;
 
 };
 export type TabParamList = {

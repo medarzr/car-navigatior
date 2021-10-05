@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Your location is required for show you in map</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>

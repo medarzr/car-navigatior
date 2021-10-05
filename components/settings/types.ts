@@ -2,8 +2,16 @@ export type IInformation = {
   text: string,
   number: string,
   docId: string,
-  id: Date
+  id: number
 };
+
+export type Driver = {
+  surname: string,
+  name: string,
+  middleName: string,
+  docId: string
+};
+
 
 // interface IInformation {
 //   text: string,

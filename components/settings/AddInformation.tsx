@@ -16,14 +16,14 @@ function AddInformation({ navigation, route }: Props) {
     text: data?.text || '',
     number: data?.number || '',
     docId: data?.docId || '',
-    id: data?.id || new Date(),
+    id: data?.id || Date.now(),
   });
 
   const setItem = async (): Promise<void> => {
     try {
       // AsyncStorage.clear();
-      const jsonValueGet: string | null = await AsyncStorage.getItem('@carItems');
-      let array: Array<IInformation> = jsonValueGet ? JSON.parse(jsonValueGet) : [];
+      const jsonValueGet: string = await AsyncStorage.getItem('@carItems') || '[]';
+      let array: Array<IInformation> = JSON.parse(jsonValueGet);
       if (data?.id) {
         array = array.filter(item => item.id !== data.id);
         // console.log(array);
@@ -66,6 +66,8 @@ function AddInformation({ navigation, route }: Props) {
           <TextInput
             mode="outlined"
             label="Car name"
+            selectionColor="#32ADE6"
+            underlineColor="#32ADE6"
             style={styles.inputStyle}
             value={text.text}
             onChangeText={value => setText({ ...text, text: value })}
@@ -87,6 +89,7 @@ function AddInformation({ navigation, route }: Props) {
           <View style={{ flexDirection: 'row', justifyContent: 'space-around', paddingTop: 8 }}>
           <Button
           style={{ flex:1, justifyContent:'center' }}
+          labelStyle={{ color: 'white' }}
           mode="contained"
           onPress={() => setItem()}>
             Save
@@ -113,5 +116,7 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     marginVertical: 8,
+    color:'red',
+    borderColor: 'red',
   },
 });

@@ -12,7 +12,7 @@ import { IInformation } from './types';
 
 type Props = {
   item: IInformation,
-  navigation: StackNavigationProp<StackParamList, 'SettingsScreen'>;
+  navigation: StackNavigationProp<StackParamList, 'Settings'>
 };
 
 function SettingsScreen(props: Props) {
@@ -21,7 +21,6 @@ function SettingsScreen(props: Props) {
         <TouchableOpacity
             onPress={() => navigation.navigate('AddInformation', { item })}
             style={styles.card}
-            key={item.docId}
         >
             <Text style={styles.title}>{item.text}</Text>
             <View style={{ flexDirection: 'row' }}>
@@ -42,21 +41,18 @@ function SettingsScreen(props: Props) {
 export default SettingsScreen;
 
 const styles = StyleSheet.create({
-  tinyLogo: {
-    flex: 1,
-    width: '100%',
-    height: 150,
-  },
-  container: {
-    flex: 1,
-    paddingTop: 16,
-  },
   card: {
-    width: '100%',
+    width: 360,
+    // height: 360,
     backgroundColor: 'white',
     margin: 8,
     padding: 16,
     borderRadius: 8,
+  },
+  tinyLogo: {
+    // flex: 1,
+    width: '100%',
+    height: 150,
   },
   subTitle: {
     fontSize: 14,
