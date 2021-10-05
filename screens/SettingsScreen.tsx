@@ -19,7 +19,7 @@ import Preloader from '../components/Preloader';
 type Props = StackScreenProps<StackParamList, 'Settings'>;
 
 function SettingsScreen({ navigation }: Props) {
-  const [data, dataSet] = useState<IInformation[] | null>(null);
+  const [data, dataSet] = useState<IInformation[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [driverData, driverDataSet] = useState<Driver>({
     surname: '',
@@ -43,7 +43,7 @@ function SettingsScreen({ navigation }: Props) {
   }, [isFocused]);
 
   if (loading) return (<Preloader />);
-
+  console.log(data);
   return (
     <View style={styles.container}>
       <ScrollView
@@ -63,7 +63,7 @@ function SettingsScreen({ navigation }: Props) {
             <Icon name="plus" size={20} color="white" />
           </TouchableOpacity>
         </View>
-        {data ?
+        {data.length > 0 ?
         <View>
         <ScrollView
             horizontal
