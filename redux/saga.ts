@@ -1,4 +1,4 @@
-import { all, fork } from 'typed-redux-saga';
+import { all } from 'typed-redux-saga';
 
 import { saga as getMarkersSaga } from './ducks/markers';
 

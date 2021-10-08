@@ -1,5 +1,9 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -9,7 +13,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.json',
   },
   plugins: ['@typescript-eslint', 'import', 'reanimated'],
   ignorePatterns: ['__oldSrc/**', '/**/*.d.ts'],

@@ -21,7 +21,7 @@ const funnyIDs: Array<string> = ['paws', 'mustache', 'tail'];
 function DriverInfo({ navigation, data } : Props) {
 
   const driverName = (): string => {
-    const isName = (subValue: any): boolean => data?.surname && subValue;
+    const isName = (subValue: string): any => data?.surname && subValue;
     const surname = data?.surname || funnyNames[Math.floor(Math.random() * funnyNames.length)];
     const name = isName(data?.name) ? `${data?.name.slice(0, 1)}.` : '';
     const middlename = isName(data?.middleName) ? `${data?.middleName.slice(0, 1)}.` : '';

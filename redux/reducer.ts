@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import markers from './ducks/markers';
+import markersReducer from './ducks/markers';
 
 const reducer = combineReducers({
-  markers,
+  markersReducer,
 });
 
 export default reducer;
